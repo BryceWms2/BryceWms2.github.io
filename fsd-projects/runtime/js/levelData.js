@@ -15,9 +15,9 @@ var makeLevelData = function (window) {
         number: 1,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 450, y: groundY },
+          { type: "sawblade", x: 625, y: groundY },
+          { type: "sawblade", x: 915, y: groundY },
         ],
       },
       {
@@ -25,14 +25,14 @@ var makeLevelData = function (window) {
         number: 2,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
-        ],
-      },
-    ];
-    window.opspark.levelData = levelData;
-  };
+          { type: "sawblade", x: 425, y: groundY },
+          { type: "sawblade", x: 615, y: groundY },
+          { type: "sawblade", x: 950, y: groundY },
+        ],   
+      },   
+    ];  
+    window.opspark.levelData = levelData; 
+  };   
 };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
