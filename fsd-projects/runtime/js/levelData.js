@@ -31,6 +31,14 @@ var makeLevelData = function (window) {
         ],   
       },   
     ];  
+    name: levelData[1].name = "Robot Rampage";
+    number: levelData[1].number = 2;
+    speed: levelData[1].speed = -3;
+    gameItems: levelData[1].gameItems = [
+      { type: "sawblade", x: 425, y: groundY },
+      { type: "sawblade", x: 615, y: groundY },
+      { type: "sawblade", x: 950, y: groundY },
+    ];
     window.opspark.levelData = levelData; 
   };   
 };
