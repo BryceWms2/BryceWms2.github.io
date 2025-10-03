@@ -41,8 +41,7 @@ var runLevels = function (window) {
       sawBladeHitZone.fadeOut();
     };
   
-
-     var enemy = game.createGameItem("enemy",25);
+       var enemy = game.createGameItem("enemy",25);
     var redSquare = draw.bitmap("img/goblin.png");
     redSquare.x = -65;
     redSquare.y = -60;
@@ -55,12 +54,14 @@ var runLevels = function (window) {
     enemy.velocityX = -3;
     enemy.onPlayerCollision = function() {
       game.changeIntegrity(-10);
+      enemy.shrink();
     };
     enemy.onProjectileCollision = function() {
       game.increaseScore(2000);
       enemy.shrink();
-    };
-
+    };  
+      
+  
   
       var reward = game.createGameItem("reward",25);
     var greenSquare = draw.bitmap("img/elixir.png");
@@ -83,7 +84,7 @@ var runLevels = function (window) {
     };
      
 
-        createMarker(1800);
+      createMarker(1800);
     function createMarker(x) {
       var marker = game.createGameItem("marker",25);
       var yellowSquare = draw.bitmap("img/crown.png");
@@ -98,9 +99,13 @@ var runLevels = function (window) {
       marker.velocityX = -3;
       marker.onPlayerCollision = function() {
         game.increaseScore(2000);
+        marker.shrink();
+        startLevel();
       };
       marker.onProjectileCollision = function() {
         game.increaseScore(2000);
+        marker.shrink();
+        startLevel();
       };
     }
 
